@@ -37,7 +37,7 @@ public class BiomeDataBase {
 	public BiomeEntry getEntry(Biome biome) {
 		if (biome != null) {
 			int biomeId = Biome.getIdForBiome(biome);//This should only return 0 - 255 because of Minecraft limitations
-			if (biomeId >= 0 && biomeId <= 255) {//Enforce 0-255 for biome id to account for misbehaving mods like Mystcraft
+			if (biomeId >= 0 && biomeId <= 1024) {//Enforce 0-255 for biome id to account for misbehaving mods like Mystcraft
 				BiomeEntry[] list = table[biomeId >> 4];
 				if (list == null) {
 					list = table[biomeId >> 4] = new BiomeEntry[16];
