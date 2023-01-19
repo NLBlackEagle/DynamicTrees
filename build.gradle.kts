@@ -21,6 +21,7 @@ repositories {
     maven("https://maven.tehnut.info")
     maven("https://www.cursemaven.com")
     maven("https://maven.blamejared.com")
+    maven("https://maven.cil.li")
 }
 
 val buildProperties = Properties()
@@ -76,7 +77,7 @@ dependencies {
     minecraft("net.minecraftforge:forge:${mcVersion}-${forgeVersion}")
 
     // Compile against full Hwyla jar.
-    implementation("mcp.mobius.waila:Hwyla:1.8.26-B41_1.12.2")
+    implementation("curse.maven:hwyla-253449:2568751")
 
     // Compile against Serene Seasons, but don't use at runtime.
     compileOnly("curse.maven:SereneSeasons-291874:2799213")
